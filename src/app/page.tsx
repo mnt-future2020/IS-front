@@ -164,12 +164,11 @@ export default function Home() {
         
         <div className="recent-chats-list">
             {conversations.map((conv) => (
-              <div 
-                key={conv._id} 
+              <div
+                key={conv._id}
                 className={cn("recent-chat-item", selectedConversationId === conv._id && "active")}
                 onClick={() => {
                   setSelectedConversationId(conv._id);
-                  setActiveView("chat");
                 }}
               >
                 <MessageSquare size={14} />
